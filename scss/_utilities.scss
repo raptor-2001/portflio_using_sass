@@ -1,0 +1,130 @@
+// Utilities
+.container{
+    max-width: $website-width;
+    padding:0.5rem 0.75rem;
+    margin: auto;
+    overflow: hidden;
+}
+
+%btn-shared{
+    display: inline-block;
+    padding:0.8rem 2rem;
+    margin-bottom:1rem;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    color:$dark-color;
+    background-color: #fff;
+    transition: all 0.5s ;
+}
+
+.btn{
+
+    &_main{
+        @extend %btn-shared;
+        color:$dark-color;
+        background-color: $main-color;
+    }
+    &_light{
+        @extend %btn-shared;
+        
+    }
+    &_dark{
+        @extend %btn-shared;
+        color: $light-color;
+        background-color: $dark-color;
+    }
+}
+
+
+// Background
+.bg{
+    &_main{
+        background-color: $main-color;
+        color:set_color($main-color);
+    }
+    &_dark{
+        background-color: $dark-color;
+        color:set_color($dark-color);
+    }
+    &_light{
+        background-color: $light-color;
+        color:set_color($light-color);
+    }
+    &_medium{
+        background-color: $medium-color;
+        color:set_color($medium-color);
+    }
+}
+button[class^='btn_']:hover,
+a[class^='btn_']:hover,
+input[class^='btn_']:hover{
+        
+        background-color: $main-color;
+}
+
+.lead{
+    font-size: 1.3rem;
+    margin-bottom:2rem;
+}
+
+.text_center{
+    text-align: center;
+}
+// padding
+
+.py{
+    &_1{
+        padding:1rem 0;
+    }
+    &_2{
+        padding:2rem 0;
+    }
+    &_3{
+        padding:3rem 0;
+    }
+}
+
+.p{
+    &_1{
+        padding:1rem;
+    }
+    &_2{
+        padding:2rem;
+    }
+    &_3{
+        padding:3rem;
+    }
+}
+
+// Margin
+
+.y{
+    &_1{
+        margin:1rem 0;
+    }
+    &_2{
+        margin:2rem 0;
+    }
+    &_3{
+        margin:3rem 0;
+    }
+}
+
+// special_title
+
+.special_title{
+    font-size:2rem;
+    font-weight: 100;
+    text-align: center;
+    display:block;
+    text-transform: uppercase;
+}
+
+// bottom line
+.bottom_line{
+    width:30px;
+    background-color: $main-color;
+    height:2px;
+    margin:auto;
+}
